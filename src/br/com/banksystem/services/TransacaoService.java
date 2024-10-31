@@ -15,9 +15,9 @@ public class TransacaoService {
 
     public void sacar(ContaBancariaService contaBancaria, double valor){
         if(this.contaBancariaService.getSaldo() == 0){
-            System.out.println("Não é possível sacar. Não há saldo.");
+            System.out.println("Não foi possível sacar. Não há saldo.");
         }else if (this.contaBancariaService.getSaldo() < valor) {
-            System.out.println("Não é possível sacar esse valor. Saldo insuficiente.");
+            System.out.println("Não foi possível sacar esse valor. Saldo insuficiente.");
         }else{
             this.contaBancariaService.setSaldo(contaBancaria.getSaldo() - valor);
             System.out.println("Saque efetuado - R$" + valor);
